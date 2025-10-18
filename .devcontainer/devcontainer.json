@@ -1,6 +1,6 @@
 {
-  "name": "Azure AI Workshop",
-  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "name": "AutoGen 0.4 Workshop",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye",
   
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
@@ -9,13 +9,18 @@
     },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true
     }
   },
 
   "customizations": {
     "vscode": {
       "settings": {
-        "python.defaultInterpreterPath": "/workspaces/azure-ai-workshop/.venv/bin/python",
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
         "python.terminal.activateEnvironment": true,
         "python.formatting.provider": "black",
         "python.linting.enabled": true,
